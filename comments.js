@@ -1,25 +1,12 @@
-// Create Web Server
+// Create web server
+// var http = require("http");
+// var fs = require("fs");
+// var path = require("path");
+// var mime = require("mime");
+// var cache = {};
 //
-// Create a web server that listens for requests on port 3000, and responds with a file named index.html.
-//
-
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
-const hostname = '
-const port = 3000;
-const server = http.createServer((req, res) => {
-    console.log("Request for " + req.url + " by method " + req.method);
-    if (req.method == 'GET') {
-        var fileUrl;
-        if (req.url == '/')
-            fileUrl = '/index.html';
-        else
-            fileUrl = req.url;
-        var filePath = path.resolve('./public' + fileUrl);
-        const fileExt = path.extname(filePath);
-    }
-});
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+// function send404(response) {
+//   response.writeHead(404, {"Content-Type": "text/plain"});
+//   response.write("Error 404: resource not found.");
+//   response.end();
+// }
